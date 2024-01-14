@@ -1,0 +1,109 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto Mono', monospace; /* new style font from google fonts*/
+  }
+  
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .fullscreenImage {
+    background-image: url('/totoro.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+}
+  
+  .scroll-indicator::before {
+    content: '\f107';  
+    font-family: 'Font Awesome 6 Free';  
+    font-size: 20px;  /* Icon size */
+    color: #B31312;
+    position: absolute;
+    top: 70%;  /
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+
+  /* Animation effect to go up or down. The percentages in the second line define the stages of the animation, transform defines
+   the transformation of the Y axis that will not have vertical movement. */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .buttons button {  /* Editing colors of secondary buttons on each page */
+    margin: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #EA906C;
+  }
+
+  .button-container button {
+    margin: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2B2A4C; 
+    color: #EEE2DE;
+  }
+.buttons button:hover {
+    background-color: #CD5C5C;
+  }
+
+.button-container button:hover {
+    background-color: #483D8B; 
+  }
+  /* Azul escura/roxo: 2B2A4C
+  vermelho: B31312
+  salmao: EA906C
+  branco: EEE2DE */
+
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
+    border: 1px solid #2B2A4C;
+    max-width: 80vmin;
+    max-height: 60vmin;
+    overflow-x: auto;
+  }
+
+.form-container label, .form-container input{
+  align-items:flex-start;
+}
+  
+.form-container label,
+.form-container input {
+  margin: 5px;
+}
+
+.date {
+  padding: 15px;
+}
