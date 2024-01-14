@@ -1,0 +1,256 @@
+<!-- Usar o simbolo de interrogação cria uma estrutura basica no html com meta tags, heah e body -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu de Despesas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Tag de compatibilidade com dispositivo -->
+    <link rel="stylesheet" href="css/style.css" />   <!-- Link para meu css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-... (hash)" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- Seção de Início -->
+    <div class="section" id="home">
+      <div class="fullscreenImage">
+        <div class="button-container">
+          <a href="#income"><button>Income</button></a>
+          <a href="#contas_fixas"><button>Register of Fixed Expenses</button></a>
+          <a href="#contas_variaveis"><button>Registration of Variable Expenses</button></a>
+          <a href="#reports"><button>Reports</button></a>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToGaleria()"></div>
+      </div>
+    </div>
+
+    <!-- Seção de Income -->
+    <div class="section" id="income">
+      <h2>Record your income details here</h2>
+      <div class="container">
+        <div class="buttons">
+          <a href="#home"><button id="incomeHome">Back to home</button></a>
+          <a href="#contas_fixas"><button id="incomeContasFixas">Registration of Fixed Expenses</button></a>
+          <a href="#contas_variaveis"><button id="incomeContasVariaveis">Registration of Monhtly Expenses</button></a>
+          <a href="#reports"><button id="reportsContasIncome">Reports</button></a>
+        </div>
+    
+        <div class="form-container">
+          <label for="xpSalary">XP Salary:</label>
+          <input type="number" id="xpSalary" name="xpSalary" min="0" />
+          <label for="xpCadSalary">XP Cad Salary:</label>
+          <input type="number" id="xpCadSalary" name="xpCadSalary" min="0" />
+          <label for="raphaelSalary">Raphael Salary:</label>
+          <input type="number" id="raphaelSalary" name="raphaelSalary" min="0"/>
+          <label for="marcellaSalary">Marcella Salary:</label>
+          <input
+            type="number"
+            id="marcellaSalary"
+            name="marcellaSalary"
+            min="0"
+          />
+          <label for="extraIncome">Extra Income:</label>
+          <input type="number" id="extraIncome" name="extraIncome" min="0" />
+          <button id="submitIncomeButton" onclick="submitIncomeForm()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Contas Fixas -->
+    <div class="section" id="contas_fixas">
+      <h2>Space to record monthly bills that will always occur in the month such as rent, electricity bill, internet bill</h2>
+      <div class="container">
+        <!-- Containers of buttons -->
+        <div class="buttons">
+          <a href="#home"><button id="backHome">Back to home</button></a>
+          <a href="#income"><button id="income">Income</button></a>
+          <a href="#contas_variaveis"><button id="contasFixas">Registration of Fixed Expenses</button></a>
+          <a href="#reports"><button id="reportsContasFixas">Reports</button></a
+          >
+        </div>
+
+        <div class="date">
+          <label for="month">Month:</label>
+          <select id="month" name="month">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+
+        <div class="form-container">
+          <label for="shiplake">Shiplake:</label>
+          <input type="number" id="shiplake" name="shiplake" min="0" />
+          <label for="lightBill">Light Bill:</label>
+          <input type="number" id="lightBill" name="xpSalary" min="0" />
+          <label for="internet">Internet:</label>
+          <input type="number" id="internet" name="internet" min="0" />
+          <label for="costCo">Cost Co:</label>
+          <input type="number" id="costCo" name="costCo" min="0" />
+          <label for="marcellaCreditCard">Marcella's Credit Card:</label>
+          <input
+            type="number"
+            id="marcellaCreditCard"
+            name="marcellaCreditCard"
+            min="0"
+          />
+          <label for="raphaelCreditCard">Raphael's Credit Card:</label>
+          <input
+            type="number"
+            id="raphaelCreditCard"
+            name="raphaelCreditCard"
+            min="0"
+          />
+          <button
+            id="submitFixedExpensesButton"
+            onclick="submitFixedExpensesButton()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Contas Variáveis -->
+    <div class="section" id="contas_variaveis">
+      <h2>Space to record variable monthly bills that will always occur in the month such as market, clothes, etc</h2>
+      <!-- Conteúdo da Seção de Contas Variáveis -->
+      <div class="container">
+        <div class="buttons">
+          <a href="#home"><button id="backHome">Back to home</button></a>
+          <a href="#income"><button id="income">Income</button></a>
+          <a href="#contas_fixas"><button id="contasFixasContasVariaveis">Register of Fixed Expenses</button></a>
+          <a href="#reports"><button id="reportsContasVariaveis">Reports</button></a>
+        </div>
+        <div class="date">
+          <!-- Container of date -->
+          <label for="month">Month:</label>
+          <select id="month" name="month">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+        <div class="form-container">
+          <label for="furniture">Furniture:</label>
+          <input type="number" id="furniture" name="furniture" min="0" />
+          <label for="greensVegetables">Greens and vegetables:</label>
+          <input
+            type="number"
+            id="greensVegetables"
+            name="greensVegetables"
+            min="0"
+          />
+          <label for="rabbitFood">Rabbit Food:</label>
+          <input type="number" id="rabbitFood" name="rabbitFood" min="0" />
+          <label for="utensilhosCasa">Utensílios para Casa:</label>
+          <input
+            type="number"
+            id="utensilhosCasa"
+            name="utensilhosCasa"
+            min="0"
+          />
+          <label for="costCo">Cost Co:</label>
+          <input type="number" id="costCo" name="costCo" min="0" />
+          <label for="dollarama">Dollarama:</label>
+          <input type="number" id="dollarama" name="dollarama" min="0" />
+          <label for="sobeys">Sobeys:</label>
+          <input type="number" id="sobeys" name="sobeys" min="0" />
+          <label for="flavor">Flavor:</label>
+          <input type="number" id="flavor" name="flavor" min="0" />
+          <label for="presto">Presto:</label>
+          <input type="number" id="presto" name="presto" min="0" />
+          <label for="amazon">Amazon:</label>
+          <input type="number" id="amazon" name="amazon" min="0" />
+          <label for="hastyMarket">Hasty Market:</label>
+          <input type="number" id="hastyMarket" name="hastyMarket" min="0" />
+          <label for="farmacy">Farmacy:</label>
+          <input type="number" id="farmacy" name="farmacy" min="0" />
+          <label for="eatOutside">Eat Outside:</label>
+          <input type="number" id="eatOutside" name="eatOutside" min="0" />
+          <label for="apple">Apple:</label>
+          <input type="number" id="apple" name="apple" min="0" />
+          <label for="google">Google:</label>
+          <input type="number" id="google" name="google" min="0" />
+          <label for="disney">Disney:</label>
+          <input type="number" id="disney" name="disney" min="0" />
+          <button
+            id="submitMonthlyExpensesButton"
+            onclick="submitMonthlyExpensesButton()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de Reports -->
+    <div class="section" id="reports">
+      <h2>Reports</h2>
+      <div class="container">
+          <div class="buttons">
+              <a href="#home"><button id="backHome">Back to home</button></a>
+              <a href="#income"><button id="income">Income</button></a>
+              <a href="#contas_fixas"><button id="contasFixasReports">Registration of Fixed Expenses</button></a>
+              <a href="#contas_variaveis"><button id="contasVariaveisReports">Reports</button></a>
+          </div>
+      </div>
+      <div class="buttons"> 
+          <button id="barChartBtn" onclick="barChart()">Bar Chart</button>
+      </div>
+  
+      <!-- <div class="container">
+          <div class="barChart" id="barChart"></div>
+      </div> -->
+  
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="main.js"></script>
+    </div>
+  
+  </body>
+</html>
