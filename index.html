@@ -1,20 +1,20 @@
-<!-- Usar o simbolo de interrogação cria uma estrutura basica no html com meta tags, heah e body -->
+<!-- Usar o simbolo de interrogação cria uma estrutura basica no html com meta tags, head e body -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Menu de Despesas</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Tag de compatibilidade com dispositivo -->
-    <link rel="stylesheet" href="css/style.css" />   <!-- Link para meu css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-... (hash)" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />   <!-- Css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-... (hash)" crossorigin="anonymous" />  <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">  <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!-- Google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">   <!-- Google fonts link -->
 
 
   </head>
   <body>
-    <!-- Seção de Início -->
+    <!-- Main page -->
     <div class="section" id="home">
       <div class="fullscreenImage">
         <div class="button-container">
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <!-- Seção de Income -->
+    <!-- Income section -->
     <div class="section" id="income">
       <h2>Record your income details here</h2>
       <div class="container">
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <!-- Seção de Contas Fixas -->
+    <!-- Fixed expenses section -->
     <div class="section" id="contas_fixas">
       <h2>Space to record monthly bills that will always occur in the month such as rent, electricity bill, internet bill</h2>
       <div class="container">
@@ -136,10 +136,9 @@
       </div>
     </div>
 
-    <!-- Seção de Contas Variáveis -->
+    <!-- Monthly expenses section -->
     <div class="section" id="contas_variaveis">
       <h2>Space to record variable monthly bills that will always occur in the month such as market, clothes, etc</h2>
-      <!-- Conteúdo da Seção de Contas Variáveis -->
       <div class="container">
         <div class="buttons">
           <a href="#home"><button id="backHome">Back to home</button></a>
@@ -180,21 +179,11 @@
           <label for="furniture">Furniture:</label>
           <input type="number" id="furniture" name="furniture" min="0" />
           <label for="greensVegetables">Greens and vegetables:</label>
-          <input
-            type="number"
-            id="greensVegetables"
-            name="greensVegetables"
-            min="0"
-          />
+          <input type="number" id="greensVegetables" name="greensVegetables" min="0" />
           <label for="rabbitFood">Rabbit Food:</label>
           <input type="number" id="rabbitFood" name="rabbitFood" min="0" />
           <label for="utensilhosCasa">Utensílios para Casa:</label>
-          <input
-            type="number"
-            id="utensilhosCasa"
-            name="utensilhosCasa"
-            min="0"
-          />
+          <input type="number"id="utensilhosCasa" name="utensilhosCasa" min="0" />
           <label for="costCo">Cost Co:</label>
           <input type="number" id="costCo" name="costCo" min="0" />
           <label for="dollarama">Dollarama:</label>
