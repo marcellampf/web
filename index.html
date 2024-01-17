@@ -19,8 +19,8 @@
       <div class="fullscreenImage">
         <div class="button-container">
           <a href="#income"><button>Income</button></a>
-          <a href="#contas_fixas"><button>Register of Fixed Expenses</button></a>
-          <a href="#contas_variaveis"><button>Registration of Variable Expenses</button></a>
+          <a href="#contas_fixas"><button>Fixed Expenses</button></a>
+          <a href="#contas_variaveis"><button>Montlhy Expenses</button></a>
           <a href="#reports"><button>Reports</button></a>
         </div>
         <div class="scroll-indicator" onclick="scrollToGaleria()"></div>
@@ -33,30 +33,21 @@
       <div class="container">
         <div class="buttons">
           <a href="#home"><button id="incomeHome">Back to home</button></a>
-          <a href="#contas_fixas"><button id="incomeContasFixas">Registration of Fixed Expenses</button></a>
-          <a href="#contas_variaveis"><button id="incomeContasVariaveis">Registration of Monhtly Expenses</button></a>
+          <a href="#contas_fixas"><button id="incomeContasFixas">Fixed Expenses</button></a>
+          <a href="#contas_variaveis"><button id="incomeContasVariaveis">Monhtly Expenses</button></a>
           <a href="#reports"><button id="reportsContasIncome">Reports</button></a>
         </div>
     
         <div class="form-container">
-          <label for="xpSalary">XP Salary:</label>
-          <input type="number" id="xpSalary" name="xpSalary" min="0" />
-          <label for="xpCadSalary">XP Cad Salary:</label>
-          <input type="number" id="xpCadSalary" name="xpCadSalary" min="0" />
-          <label for="raphaelSalary">Raphael Salary:</label>
-          <input type="number" id="raphaelSalary" name="raphaelSalary" min="0"/>
-          <label for="marcellaSalary">Marcella Salary:</label>
-          <input
-            type="number"
-            id="marcellaSalary"
-            name="marcellaSalary"
-            min="0"
-          />
+          <label for="brlSalary">Brl Salary:</label>
+          <input type="number" id="brlSalary" name="brlSalary" min="0" />
+          <label for="cadSalary1">Primary Cad Salary</label>
+          <input type="number" id="cadSalary" name="cadSalary" min="0" />
+          <label for="cadSalary2">Secondary Cad Salary:</label>
+          <input type="number" id="cadSalary2" name="cadSalary2" min="0"/>
           <label for="extraIncome">Extra Income:</label>
           <input type="number" id="extraIncome" name="extraIncome" min="0" />
-          <button id="submitIncomeButton" onclick="submitIncomeForm()">
-            Submit
-          </button>
+          <button id="submitIncomeButton" onclick="submitIncomeForm()">Submit</button>
         </div>
       </div>
     </div>
@@ -104,23 +95,16 @@
         </div>
 
         <div class="form-container">
-          <label for="shiplake">Shiplake:</label>
+          <label for="shiplake">Rent:</label>
           <input type="number" id="shiplake" name="shiplake" min="0" />
           <label for="lightBill">Light Bill:</label>
-          <input type="number" id="lightBill" name="xpSalary" min="0" />
+          <input type="number" id="lightBill" name="lightBill" min="0" />
           <label for="internet">Internet:</label>
           <input type="number" id="internet" name="internet" min="0" />
-          <label for="costCo">Cost Co:</label>
-          <input type="number" id="costCo" name="costCo" min="0" />
-          <label for="marcellaCreditCard">Marcella's Credit Card:</label>
-          <input
-            type="number"
-            id="marcellaCreditCard"
-            name="marcellaCreditCard"
-            min="0"
-          />
-          <label for="raphaelCreditCard">Raphael's Credit Card:</label>
-          <input type="number" id="raphaelCreditCard" name="raphaelCreditCard" min="0" />
+          <label for="creditCard1">Credit Card Number 1:</label>
+          <input type="number" id="creditCard1" name="creditCard1" min="0" />
+          <label for="creditCard2">Credit Card Number 2:</label>
+          <input type="number" id="creditCard2" name="creditCard2" min="0"/>
           <button id="submitFixedExpensesButton" onclick="submitFixedExpensesButton()">Submit</button>
         </div>
       </div>
@@ -134,7 +118,7 @@
         <div class="buttons">
           <a href="#home"><button id="backHome">Back to home</button></a>
           <a href="#income"><button id="income">Income</button></a>
-          <a href="#contas_fixas"><button id="contasFixasContasVariaveis">Register of Fixed Expenses</button></a>
+          <a href="#contas_fixas"><button id="contasFixasContasVariaveis">Fixed Expenses</button></a>
           <a href="#reports"><button id="reportsContasVariaveis">Reports</button></a>
         </div>
         <div class="date">
@@ -173,8 +157,8 @@
           <input type="number" id="greensVegetables" name="greensVegetables" min="0"/>
           <label for="rabbitFood">Rabbit Food:</label>
           <input type="number" id="rabbitFood" name="rabbitFood" min="0" />
-          <label for="utensilhosCasa">Utensílios para Casa:</label>
-          <input type="number" id="utensilhosCasa" name="utensilhosCasa" min="0" />
+          <label for="utensilhosCasa">Home Utensils:</label>
+          <input type="number" id="homeUtensils" name="homeUtensils" min="0" />
           <label for="costCo">Cost Co:</label>
           <input type="number" id="costCo" name="costCo" min="0" />
           <label for="dollarama">Dollarama:</label>
@@ -211,8 +195,8 @@
           <div class="buttons">
               <a href="#home"><button id="backHome">Back to home</button></a>
               <a href="#income"><button id="income">Income</button></a>
-              <a href="#contas_fixas"><button id="contasFixasReports">Registration of Fixed Expenses</button></a>
-              <a href="#contas_variaveis"><button id="contasVariaveisReports">Reports</button></a>
+              <a href="#contas_fixas"><button id="contasFixasReports">Fixed Expenses</button></a>
+              <a href="#contas_variaveis"><button id="contasVariaveisReports">Monhtly Expenses</button></a>
           </div>
       </div>
       <div class="buttons"> 
