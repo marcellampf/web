@@ -2,32 +2,27 @@
 function submitIncomeForm() {
     // let month = document.getElementById("month").value;
     // let year = document.getElementById("year").value;
-    // let xpSalary = document.getElementById("xpSalary").value;
-    // let xpCadSalary = document.getElementById("xpCadSalary").value;
-    // let raphaelSalary = document.getElementById("raphaelSalary").value;
-    // let marcellaSalary = document.getElementById("marcellaSalary").value;
+    // let brlSalary = document.getElementById("brlSalary").value;
+    // let cadSalary1 = document.getElementById("cadSalary1").value;
+    // let cadSalary2 = document.getElementById("cadSalary2").value;
     // let extraIncome = document.getElementById("extraIncome").value;
 }
 
 function submitFixedExpensesButton() {
     let month = document.getElementById("month").value;
     let year = document.getElementById("year").value;
-    let grossSalary = document.getElementById("grossSalary").value;
-    let xpSalary = document.getElementById("xpSalary").value;
-    let xpCadSalary = document.getElementById("xpCadSalary").value;
     let shiplake = document.getElementById("shiplake").value;
     let lightBill = document.getElementById("lightBill").value;
     let internet = document.getElementById("internet").value;
-    let costCo = document.getElementById("costCo").value;
-    let marcellaCreditCard = document.getElementById("marcellaCreditCard").value;
-    let raphaelCreditCard = document.getElementById("raphaelCreditCard").value;
+    let creditCard1 = document.getElementById("creditCard1").value;
+    let creditCard2 = document.getElementById("creditCard2").value;
 }
 
 function submitMonthlyExpensesButton() {
     let furniture = document.getElementById("furniture").value;
     let greensVegetables = document.getElementById("greensVegetables").value;
     let rabbitFood = document.getElementById("rabbitFood").value;
-    let utensilhosCasa = document.getElementById("utensilhosCasa").value;
+    let homeUtensils = document.getElementById("homeUtensils").value;
     let dollarama = document.getElementById("dollarama").value;
     let sobeys = document.getElementById("sobeys").value;
     let flavor = document.getElementById("flavor").value;
@@ -43,10 +38,9 @@ function submitMonthlyExpensesButton() {
 
 let month = 1;
 let year = 2024;
-let xpSalary = 4600;
-let xpCadSalary = 1200;
-let raphaelSalary = 2000;
-let marcellaSalary = 600;
+let brlSalary = 4600;
+let cadSalary1 = 1200;
+let cadSalary2 = 2000;
 let extraIncome = 100;
 
 google.charts.load('current', {'packages':['corechart']});
@@ -56,10 +50,9 @@ google.charts.setOnLoadCallback(barChart);
 function barChart() {
     var data = google.visualization.arrayToDataTable([
         ['Category', 'Amount'],
-        ['XP Salary', xpSalary],
-        ['XP Cad Salary', xpCadSalary],
-        ['Raphael Salary', raphaelSalary],
-        ['Marcella Salary', marcellaSalary],
+        ['Brl Salary', brlSalary],
+        ['Primary Salary', cadSalary1],
+        ['Secondary Salary', cadSalary2],
         ['Extra Income', extraIncome]
     ]);
 
