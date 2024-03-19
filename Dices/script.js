@@ -3,7 +3,6 @@ document.getElementById('rollButton').addEventListener('click', function() {
     var diceGifContainer = document.getElementById('diceGif');
     var gifHTML = '';
   
-    // Define o HTML do GIF com base no valor selecionado
     switch(sides) {
       case '4':
         gifHTML = '<iframe src="https://giphy.com/embed/HRUboYorHt6sloh8cv" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>';
@@ -25,13 +24,13 @@ document.getElementById('rollButton').addEventListener('click', function() {
         break;
     }
   
-    diceGifContainer.innerHTML = gifHTML; // Atualiza o contêiner com o GIF apropriado
-    diceGifContainer.style.opacity = 1; // Torna o GIF visível
+    diceGifContainer.innerHTML = gifHTML; 
+    diceGifContainer.style.opacity = 1; 
   
     setTimeout(function() {
       var result = Math.floor(Math.random() * sides) + 1;
       document.getElementById('resultDisplay').textContent = 'Result: ' + result;
-      diceGifContainer.style.opacity = 0; // Esconde o GIF após mostrar o resultado
-    }, 2100); // Duração da visualização do GIF
+      diceGifContainer.style.opacity = 0; 
+    }, 2100);
   });
   
