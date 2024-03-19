@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+ #diceSimulator {
+    text-align: center;
+  }
+  
+  #controls {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 90px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  #resultDisplay {
+    font-size: 24px;
+  }
+  
+  #diceSides {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #rollButton {
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #rollButton:hover {
+    background-color: #0056b3;
+  }
+  
+  #diceGif {
+    max-width: 600px;
+    margin: auto;
+    transition: opacity 2s;
+    opacity: 0;
+  }
+  
+  #diceGif iframe {
+    width: 100%;
+    height: auto;
+  }
+
+@media (max-width: 768px) {
+    #controls {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    #resultDisplay, #diceSides, #rollButton {
+      font-size: 14px;
+    }
+  }
+  
+  #rollButton:active {
+    transform: scale(0.98); 
+    background-color: #0069d9; 
+  }
+  
+  @media print {
+    #rollButton, #diceSides, #diceGif {
+      display: none; 
+    }
+  
+    #diceSimulator {
+      text-align: left;
+    }
+  
+    #resultDisplay {
+      font-size: 18px;
+    }
+  }
+  
